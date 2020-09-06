@@ -1,0 +1,66 @@
+@import '../../../../../styles.scss';
+
+.card {
+  z-index: 1;
+  width: 88%;
+  height: 55vh;
+  position: absolute;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  display: inline;
+  border-radius: 5px;
+  background: var(--card-color);
+
+  .poster {
+    z-index: 1;
+    position: relative;
+    max-width: 45%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0;
+    float: left;
+  }
+
+  .body {
+    position: relative;
+    max-height: 83%;
+    overflow-y: scroll;
+    padding: 2vw;
+
+    .title {
+      font-size: xx-large;
+      width: 70%;
+    }
+
+    .overview {
+      font-size: x-large;
+      margin-top: 5vh;
+      width: 100%;
+      line-height: 165%;
+    }
+  }
+}
+
+.backdrop {
+  filter: blur(15px);
+  width: inherit;
+  z-index: 0;
+  position: absolute;
+  height: 110vh;
+  width: 110vw;
+}
+.poster {
+  z-index: 1;
+  float: right;
+  position: relative;
+  margin-right: 2vw;
+  margin-top: 2vh;
+  display: block;
+  max-width: 23vw;
+  max-height: 74vh;
+  width: auto;
+  height: auto;
+}
+
+

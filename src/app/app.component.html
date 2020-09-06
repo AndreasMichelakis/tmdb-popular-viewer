@@ -1,0 +1,16 @@
+<div class="application">
+  <app-header></app-header>
+  <ng-container *ngIf="appReady; else showLoadingScreen">
+    <router-outlet></router-outlet>
+  </ng-container>
+  <ng-template #showLoadingScreen>
+    <div class="loading-screen">
+      <div id="welcomeMessage" class="title">{{ welcomeMessage }}</div>
+      <div class="spinner"></div>
+    </div>
+  </ng-template>
+</div>
+<div class="tmdb-attribution">
+  <div class="subtitle">Powered by</div>
+  <div class="logo"></div>
+</div>

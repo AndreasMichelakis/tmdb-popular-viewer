@@ -1,0 +1,13 @@
+<div class="sidebar" (scroll)="onScroll($event)">
+  <div class="item" *ngFor="let movie of movies" (click)="setMovieInView(movie)">
+    <div class="title">{{ movie.title }}</div>
+    <div class="rating">
+      <span *ngFor="let star of generateArray(10); let i = index">
+        <div *ngIf="i+1 - movie.vote_average <= 0" class="full-star">★</div>
+        <div *ngIf="i+1 - movie.vote_average >= 1">☆</div>
+        <div *ngIf="(i+1 - movie.vote_average < 1)&&(i+1 - movie.vote_average > 0)" class="half-star">★</div>
+       </span>
+    </div>
+  </div>
+  <div class="empty"></div>
+</div>

@@ -1,0 +1,74 @@
+@import "../../../styles.scss";
+
+.navbar {
+  height: 5.5vh;
+  background-color: var(--head-color);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 0.5%;
+
+  .navbar-items {
+    position: relative;
+
+    button {
+      border-color: transparent;
+      background-color: transparent;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 15%;
+      position: relative;
+      outline: none;
+      img {
+        height: inherit;
+        border: 0;
+        outline: none;
+      }
+    }
+
+    button:hover {
+      filter: drop-shadow(2px 4px 2px #232428);
+    }
+    button:active {
+      filter: unset;
+    }
+
+    .navbar-logo {
+      height: 5vh;
+      position: relative;
+      .logo-img {
+        height: inherit;
+        -webkit-animation: swing-in-left-bck 1.2s
+          cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        animation: swing-in-left-bck 1.2s
+          cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .navbar {
+    height: 9vh;
+
+    .navbar-items {
+      height: 7vh;
+      top: 1vh;
+      left: 1.5vw;
+    }
+    .navbar-logo {
+      height: 7vh;
+
+      .logo-img {
+        height: inherit;
+      }
+      .logo-txt {
+        height: 0 !important;
+      }
+    }
+  }
+}

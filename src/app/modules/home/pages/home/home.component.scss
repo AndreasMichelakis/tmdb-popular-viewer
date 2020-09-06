@@ -1,0 +1,23 @@
+@import "../../../../../styles.scss";
+
+.home-page {
+  width: 100vw;
+  display: flex;
+  height: auto;
+  overflow: hidden;
+
+  app-movie-list {
+    position: relative;
+    width: 21vw;
+    height: 100vh;
+    background: var(--background-color);
+    box-shadow: 1px 0 1px 0 var(--secondary-color);
+    z-index: 1;
+  }
+
+  app-movie-viewer {
+    position: relative;
+    width: 79vw;
+    height: 100vh;
+  }
+}

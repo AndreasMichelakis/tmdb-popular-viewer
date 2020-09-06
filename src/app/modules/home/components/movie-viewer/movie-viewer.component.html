@@ -1,0 +1,36 @@
+<ng-container *ngIf="movie !== undefined; else showLoadingScreen">
+  <div class="card">
+    <img
+      class="poster"
+      *ngIf="movie.poster_path != null; else showPlaceholder"
+      [src]="getPosterUrl(movie.poster_path)"
+      alt=""
+    />
+    <div class="body">
+      <div class="title">{{ movie.title }}</div>
+      <div class="votes">
+        {{ movie.vote_average }} ({{ movie.vote_count }} votes)
+      </div>
+      <div class="release">Release date: {{ movie.release_date }}</div>
+      <div class="overview">{{ movie.overview }}</div>
+    </div>
+  </div>
+  <img
+    class="backdrop"
+    *ngIf="movie.backdrop_path != null; else showPlaceholder"
+    [src]="getPosterUrl(movie.backdrop_path)"
+    alt=""
+  />
+</ng-container>
+
+<ng-template #showLoadingScreen>
+  <div class="loading-screen">
+    <div id="welcomeMessage" class="title">
+      Discover the latest popular movies
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #showPlaceholder>
+  <div class="loading-screen"></div>
+</ng-template>

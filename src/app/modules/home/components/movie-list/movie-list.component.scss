@@ -1,0 +1,99 @@
+@import "../../../../../styles.scss";
+
+.sidebar {
+  overflow: scroll;
+  color: var(--text);
+  width: inherit;
+  height: inherit;
+
+  .item {
+    margin: 1vh;
+    background: var(--card-color);
+    width: auto;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2vw;
+    display: block;
+
+    .title {
+      // padding: 2vw;
+    }
+  }
+
+  .item:hover {
+    -webkit-animation: shadow-drop-2-lr 0.1s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: shadow-drop-2-lr 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .empty {
+    height: 10vw;
+    display: block;
+  }
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: ltr;
+  position: relative;
+  font-size: x-large;
+
+  span {
+    display: inline-block;
+    position: relative;
+
+    .full-star {
+      color: gold;
+    }
+
+    .empty-star {
+      color: black;
+    }
+
+    .half-star{
+      width: 50%;
+      overflow: hidden;
+      display: flex;
+      color: gold;
+    }
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation shadow-drop-2-lr Drops shadows to the left and right (pop out effect)
+ * ----------------------------------------
+ */
+@-webkit-keyframes shadow-drop-2-lr {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
+    -webkit-box-shadow: -12px 0 20px -12px var(--button-highlight),
+      12px 0 20px -12px var(--button-highlight);
+    box-shadow: -12px 0 20px -12px var(--button-highlight),
+      12px 0 20px -12px var(--button-highlight);
+  }
+}
+@keyframes shadow-drop-2-lr {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
+    -webkit-box-shadow: -12px 0 20px -12px var(--button-highlight),
+      12px 0 20px -12px var(--button-highlight);
+    box-shadow: -12px 0 20px -12px var(--button-highlight),
+      12px 0 20px -12px var(--button-highlight);
+  }
+}
