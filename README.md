@@ -1,5 +1,6 @@
-# TmdbTest
+# TMDB Popular Viewer
 
+A test project that uses The Movie Database API to query for and display popular movies along with media.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
 ## Development server
